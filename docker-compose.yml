@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  bique-gate:
+    container_name: verifier
+    image: resbai_verifier
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      - PYTHONPATH=/app
+    ports:
+      - 8000:8000
+    extra_hosts:
+      - "seed:10.4.41.51"
