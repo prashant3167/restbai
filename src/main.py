@@ -1,12 +1,19 @@
 from flask import Flask, request
 from paste.translogger import TransLogger
 from waitress import serve
+import subprocess
+from ml import get_room_details
 # from flask_cors import CORS
 
 import os
 
 app = Flask(__name__)
 # CORS(app)
+
+def create_url(pid):
+    subprocess.run(["git", "-C","app", "add", "."]) 
+    subprocess.run(["git", "-C","app", "commit", "-a", "-m", f"""\"{pid} images\""""])
+    subprocess.run(["git", "-C","app", "push"]) 
 
 
 @app.route("/upload", methods=["POST"])
@@ -23,15 +30,17 @@ def upload():
     # # image.save('/app/static/test.jpeg')
     data = request.form.to_dict() 
     print(data)
+    image_url = []
     for file in request.files.getlist("files"):
         print(file)
         filename = file.filename
         file.save('app/static/'+pid+'/'+filename)
+        image_url.append(f'https://raw.githubusercontent.com/prashant3167/fastrestbai/main/static/{pid}/{filename}')
+    create_url(pid)
+    for i in image_url:
+        r_type,r_feature =get_room_details(i)
+        print(r_type,r_feature)
 
-    # image.save('/app/'+image.filename)
-    # You can save the image to a directory or perform any other processing here.
-    # For simplicity, let's just return the name of the uploaded image.
-    # return "Image uploaded: " + image.filename
     return {"hbc": request.files.getlist("upload")}
 
 
