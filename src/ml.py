@@ -12,6 +12,9 @@ def get_room_details(img_url):
         "image_url": img_url,
     }
     response = requests.get(url, params=payload).json()
+
+    print(response)
+
     feature_set = [item["label"] for item in response["response"]["solutions"]["re_features_v4"]["detections"]]
     room_type = response["response"]["solutions"]["re_roomtype_global_v2"]["top_prediction"]["label"]
     sleep(1)
