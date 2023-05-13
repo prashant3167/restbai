@@ -1,0 +1,304 @@
+{
+    "bedroom": [
+        {
+          "label": "sofa",
+          "value": "sofa"
+        },
+        {
+          "label": "coffee table",
+          "value": "coffee table"
+        },
+        {
+          "label": "television",
+          "value": "television"
+        },
+        {
+          "label": "entertainment center",
+          "value": "entertainment center"
+        },
+        {
+          "label": "bookshelf",
+          "value": "bookshelf"
+        },
+        {
+          "label": "lounge chair",
+          "value": "lounge chair"
+        },
+        {
+          "label": "ottoman",
+          "value": "ottoman"
+        },
+        {
+          "label": "side table",
+          "value": "side table"
+        },
+        {
+          "label": "floor lamp",
+          "value": "floor lamp"
+        },
+        {
+          "label": "table lamp",
+          "value": "table lamp"
+        },
+        {
+          "label": "wall art",
+          "value": "wall art"
+        },
+        {
+          "label": "curtains/blinds",
+          "value": "curtains/blinds"
+        },
+        {
+          "label": "rug",
+          "value": "rug"
+        },
+        {
+          "label": "throw pillows",
+          "value": "throw pillows"
+        },
+        {
+          "label": "throw blankets",
+          "value": "throw blankets"
+        },
+        {
+          "label": "plants/flowers",
+          "value": "plants/flowers"
+        },
+        {
+          "label": "coasters",
+          "value": "coasters"
+        },
+        {
+          "label": "remote controls",
+          "value": "remote controls"
+        },
+        {
+          "label": "media player",
+          "value": "media player"
+        },
+        {
+          "label": "game console",
+          "value": "game console"
+        },
+        {
+          "label": "sound system",
+          "value": "sound system"
+        },
+        {
+          "label": "fireplace",
+          "value": "fireplace"
+        },
+        {
+          "label": "shelving units",
+          "value": "shelving units"
+        },
+        {
+          "label": "magazine/book rack",
+          "value": "magazine/book rack"
+        },
+        {
+          "label": "decorative objects",
+          "value": "decorative objects"
+        },
+        {
+          "label": "mirrors",
+          "value": "mirrors"
+        }
+      ]
+      ,
+    "kitchen": [
+        {
+          "label": "oven",
+          "value": "oven"
+        },
+        {
+          "label": "refrigerator",
+          "value": "refrigerator"
+        },
+        {
+          "label": "microwave",
+          "value": "microwave"
+        },
+        {
+          "label": "dishwasher",
+          "value": "dishwasher"
+        },
+        {
+          "label": "sink",
+          "value": "sink"
+        },
+        {
+          "label": "stove",
+          "value": "stove"
+        },
+        {
+          "label": "kitchen island",
+          "value": "kitchen island"
+        },
+        {
+          "label": "cabinets",
+          "value": "cabinets"
+        },
+        {
+          "label": "countertop",
+          "value": "countertop"
+        },
+        {
+          "label": "backsplash",
+          "value": "backsplash"
+        },
+        {
+          "label": "range hood",
+          "value": "range hood"
+        },
+        {
+          "label": "coffee maker",
+          "value": "coffee maker"
+        },
+        {
+          "label": "toaster",
+          "value": "toaster"
+        },
+        {
+          "label": "blender",
+          "value": "blender"
+        },
+        {
+          "label": "food processor",
+          "value": "food processor"
+        },
+        {
+          "label": "mixer",
+          "value": "mixer"
+        },
+        {
+          "label": "kettle",
+          "value": "kettle"
+        },
+        {
+          "label": "cutting board",
+          "value": "cutting board"
+        },
+        {
+          "label": "knives",
+          "value": "knives"
+        },
+        {
+          "label": "pots and pans",
+          "value": "pots and pans"
+        },
+        {
+          "label": "utensils",
+          "value": "utensils"
+        },
+        {
+          "label": "dining table",
+          "value": "dining table"
+        },
+        {
+          "label": "chairs",
+          "value": "chairs"
+        },
+        {
+          "label": "light fixtures",
+          "value": "light fixtures"
+        },
+        {
+          "label": "trash bin",
+          "value": "trash bin"
+        },
+        {
+          "label": "recycling bin",
+          "value": "recycling bin"
+        }
+      ],
+      "washroom":
+        [
+          {
+            "label": "sink",
+            "value": "sink"
+          },
+          {
+            "label": "toilet",
+            "value": "toilet"
+          },
+          {
+            "label": "shower",
+            "value": "shower"
+          },
+          {
+            "label": "bathtub",
+            "value": "bathtub"
+          },
+          {
+            "label": "mirror",
+            "value": "mirror"
+          },
+          {
+            "label": "cabinet",
+            "value": "cabinet"
+          },
+          {
+            "label": "vanity",
+            "value": "vanity"
+          },
+          {
+            "label": "towel rack",
+            "value": "towel rack"
+          },
+          {
+            "label": "soap dispenser",
+            "value": "soap dispenser"
+          },
+          {
+            "label": "toilet paper holder",
+            "value": "toilet paper holder"
+          },
+          {
+            "label": "towel holder",
+            "value": "towel holder"
+          },
+          {
+            "label": "shower curtain",
+            "value": "shower curtain"
+          },
+          {
+            "label": "rug",
+            "value": "rug"
+          },
+          {
+            "label": "trash bin",
+            "value": "trash bin"
+          },
+          {
+            "label": "air freshener",
+            "value": "air freshener"
+          },
+          {
+            "label": "hand dryer",
+            "value": "hand dryer"
+          },
+          {
+            "label": "window",
+            "value": "window"
+          },
+          {
+            "label": "exhaust fan",
+            "value": "exhaust fan"
+          },
+          {
+            "label": "light fixtures",
+            "value": "light fixtures"
+          },
+          {
+            "label": "hooks",
+            "value": "hooks"
+          },
+          {
+            "label": "shelves",
+            "value": "shelves"
+          }
+        ]
+      
+}
+  
