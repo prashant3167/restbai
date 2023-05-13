@@ -18,6 +18,7 @@ def create_url(pid):
 
 @app.route("/upload", methods=["POST"])
 def upload():
+    print("request.form.keys")
     print(request.form.keys())
     
     if "files" not in request.files:
@@ -25,10 +26,12 @@ def upload():
     # print(request.files["files"])
     # # image = request.files["files"]
     pid = request.form['name']
+    print("request.form")
     print(type(request.form))
     os.makedirs('app/static/'+pid,exist_ok=True)
     # # image.save('/app/static/test.jpeg')
-    data = request.form.to_dict() 
+    data = request.form.to_dict()
+    print("request.form.to_dict(")
     print(data)
     image_url = []
     for file in request.files.getlist("files"):
