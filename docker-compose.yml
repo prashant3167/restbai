@@ -1,9 +1,16 @@
 version: '3.4'
 
 services:
+  frontend:
+    build:
+      context: ui
+    container_name: frontend
+    ports:
+      - "80:80"
+
   verifier:
     container_name: verifier
-    image: docker.io/library/resbai_verifier:main-d53a41e-dirty
+    image: docker.io/library/resbai_verifier:main-23c29ed-dirty
     # build:
     #   context: .
     #   dockerfile: ./Dockerfile

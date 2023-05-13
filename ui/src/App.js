@@ -9,14 +9,14 @@ function App() {
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [propertyid, setpropertyid] = useState("");
   const [childData, setChildData] = useState({
-    bedroom: [],
+    interior: [],
     kitchen: [],
-    washroom: [],
+    appliances: [],
     countbed: 1,
     countwash: 1,
     // Add more child components as needed
   });
-  console.log(optionsa);
+  // console.log(optionsa);
 
 
   const handleDataChange = (childId, data) => {
@@ -62,23 +62,28 @@ function App() {
 
     formData.append("name", propertyid);
     formData.append(
-      "bedroom",
-      childData.bedroom.map(({ value }) => value)
+      "interior",
+      childData.interior.map(({ value }) => value)
     );
     formData.append(
       "kitchen",
       childData.kitchen.map(({ value }) => value)
     );
     formData.append(
-      "washroom",
-      childData.washroom.map(({ value }) => value)
+      "appliances",
+      childData.appliances.map(({ value }) => value)
     );
     formData.append("totalBedroom", childData.countbed);
     formData.append("totalWashroom", childData.countwash);
 
-    fetch("https://127.0.0.1:8000/upload", {
+    fetch("http://verifier:8000/upload", {
       method: "POST",
       body: formData,
+      headers: {
+        'Access-Control-Allow-Origin': "*",
+        'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+        "Accept": "*/*",
+        },
     })
       .then((response) => response.json())
       .then((data) => {
@@ -116,9 +121,9 @@ function App() {
       />
       <AnimatedMulti
         childId="bedroom"
-        options={optionsa.bedroom}
+        options={optionsa.interior}
         onChange={handleDataChange}
-        placeholder={<div>Select Bedrooom amenities</div>}
+        placeholder={<div>Select Interior amenities</div>}
       />
       <AnimatedMulti
         childId="kitchen"
@@ -127,14 +132,14 @@ function App() {
         placeholder={<div>Select Kitchen amenities</div>}
       />
       <AnimatedMulti
-        childId="washroom"
-        options={optionsa.washroom}
+        childId="appliances"
+        options={optionsa.appliances}
         onChange={handleDataChange}
-        placeholder={<div>Select Washroom amenities</div>}
+        placeholder={<div>Select appliances available</div>}
       />
 
       <div className="form-group">
-        <label htmlFor="files">Files:</label>
+        <label htmlFor="files">Select Property Images:</label>
         <input type="file" id="files" multiple onChange={handleFileChange} />
       </div>
       <button type="submit">Verify</button>

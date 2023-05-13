@@ -1,304 +1,64 @@
 {
-    "bedroom": [
-        {
-          "label": "sofa",
-          "value": "sofa"
-        },
-        {
-          "label": "coffee table",
-          "value": "coffee table"
-        },
-        {
-          "label": "television",
-          "value": "television"
-        },
-        {
-          "label": "entertainment center",
-          "value": "entertainment center"
-        },
-        {
-          "label": "bookshelf",
-          "value": "bookshelf"
-        },
-        {
-          "label": "lounge chair",
-          "value": "lounge chair"
-        },
-        {
-          "label": "ottoman",
-          "value": "ottoman"
-        },
-        {
-          "label": "side table",
-          "value": "side table"
-        },
-        {
-          "label": "floor lamp",
-          "value": "floor lamp"
-        },
-        {
-          "label": "table lamp",
-          "value": "table lamp"
-        },
-        {
-          "label": "wall art",
-          "value": "wall art"
-        },
-        {
-          "label": "curtains/blinds",
-          "value": "curtains/blinds"
-        },
-        {
-          "label": "rug",
-          "value": "rug"
-        },
-        {
-          "label": "throw pillows",
-          "value": "throw pillows"
-        },
-        {
-          "label": "throw blankets",
-          "value": "throw blankets"
-        },
-        {
-          "label": "plants/flowers",
-          "value": "plants/flowers"
-        },
-        {
-          "label": "coasters",
-          "value": "coasters"
-        },
-        {
-          "label": "remote controls",
-          "value": "remote controls"
-        },
-        {
-          "label": "media player",
-          "value": "media player"
-        },
-        {
-          "label": "game console",
-          "value": "game console"
-        },
-        {
-          "label": "sound system",
-          "value": "sound system"
-        },
-        {
-          "label": "fireplace",
-          "value": "fireplace"
-        },
-        {
-          "label": "shelving units",
-          "value": "shelving units"
-        },
-        {
-          "label": "magazine/book rack",
-          "value": "magazine/book rack"
-        },
-        {
-          "label": "decorative objects",
-          "value": "decorative objects"
-        },
-        {
-          "label": "mirrors",
-          "value": "mirrors"
-        }
-      ]
-      ,
-    "kitchen": [
-        {
-          "label": "oven",
-          "value": "oven"
-        },
-        {
-          "label": "refrigerator",
-          "value": "refrigerator"
-        },
-        {
-          "label": "microwave",
-          "value": "microwave"
-        },
-        {
-          "label": "dishwasher",
-          "value": "dishwasher"
-        },
-        {
-          "label": "sink",
-          "value": "sink"
-        },
-        {
-          "label": "stove",
-          "value": "stove"
-        },
-        {
-          "label": "kitchen island",
-          "value": "kitchen island"
-        },
-        {
-          "label": "cabinets",
-          "value": "cabinets"
-        },
-        {
-          "label": "countertop",
-          "value": "countertop"
-        },
-        {
-          "label": "backsplash",
-          "value": "backsplash"
-        },
-        {
-          "label": "range hood",
-          "value": "range hood"
-        },
-        {
-          "label": "coffee maker",
-          "value": "coffee maker"
-        },
-        {
-          "label": "toaster",
-          "value": "toaster"
-        },
-        {
-          "label": "blender",
-          "value": "blender"
-        },
-        {
-          "label": "food processor",
-          "value": "food processor"
-        },
-        {
-          "label": "mixer",
-          "value": "mixer"
-        },
-        {
-          "label": "kettle",
-          "value": "kettle"
-        },
-        {
-          "label": "cutting board",
-          "value": "cutting board"
-        },
-        {
-          "label": "knives",
-          "value": "knives"
-        },
-        {
-          "label": "pots and pans",
-          "value": "pots and pans"
-        },
-        {
-          "label": "utensils",
-          "value": "utensils"
-        },
-        {
-          "label": "dining table",
-          "value": "dining table"
-        },
-        {
-          "label": "chairs",
-          "value": "chairs"
-        },
-        {
-          "label": "light fixtures",
-          "value": "light fixtures"
-        },
-        {
-          "label": "trash bin",
-          "value": "trash bin"
-        },
-        {
-          "label": "recycling bin",
-          "value": "recycling bin"
-        }
-      ],
-      "washroom":
-        [
-          {
-            "label": "sink",
-            "value": "sink"
-          },
-          {
-            "label": "toilet",
-            "value": "toilet"
-          },
-          {
-            "label": "shower",
-            "value": "shower"
-          },
-          {
-            "label": "bathtub",
-            "value": "bathtub"
-          },
-          {
-            "label": "mirror",
-            "value": "mirror"
-          },
-          {
-            "label": "cabinet",
-            "value": "cabinet"
-          },
-          {
-            "label": "vanity",
-            "value": "vanity"
-          },
-          {
-            "label": "towel rack",
-            "value": "towel rack"
-          },
-          {
-            "label": "soap dispenser",
-            "value": "soap dispenser"
-          },
-          {
-            "label": "toilet paper holder",
-            "value": "toilet paper holder"
-          },
-          {
-            "label": "towel holder",
-            "value": "towel holder"
-          },
-          {
-            "label": "shower curtain",
-            "value": "shower curtain"
-          },
-          {
-            "label": "rug",
-            "value": "rug"
-          },
-          {
-            "label": "trash bin",
-            "value": "trash bin"
-          },
-          {
-            "label": "air freshener",
-            "value": "air freshener"
-          },
-          {
-            "label": "hand dryer",
-            "value": "hand dryer"
-          },
-          {
-            "label": "window",
-            "value": "window"
-          },
-          {
-            "label": "exhaust fan",
-            "value": "exhaust fan"
-          },
-          {
-            "label": "light fixtures",
-            "value": "light fixtures"
-          },
-          {
-            "label": "hooks",
-            "value": "hooks"
-          },
-          {
-            "label": "shelves",
-            "value": "shelves"
-          }
-        ]
-      
+  "interior": [
+    { "label": "Beamed Ceiling", "value": "beamed_ceiling" },
+    { "label": "Brick Ceiling", "value": "brick_ceiling" },
+    { "label": "Brick Wall", "value": "brick_wall" },
+    { "label": "Built-in Shelves", "value": "built_in_shelves" },
+    { "label": "Ceiling Fan", "value": "ceiling_fan" },
+    { "label": "Coffered Ceiling", "value": "coffered_ceiling" },
+    { "label": "Concrete Ceiling", "value": "concrete_ceiling" },
+    { "label": "Concrete Wall", "value": "concrete_wall" },
+    { "label": "Crown Molding", "value": "crown_molding" },
+    { "label": "Drop Ceiling", "value": "drop_ceiling" },
+    { "label": "Elevator", "value": "elevator" },
+    { "label": "Fireplace", "value": "fireplace" },
+    { "label": "Floor Ceiling Windows", "value": "floor_ceiling_windows" },
+    { "label": "French Doors", "value": "french_doors" },
+    { "label": "High Ceiling", "value": "high_ceiling" },
+    { "label": "Log Wall", "value": "log_wall" },
+    { "label": "Low Ceiling", "value": "low_ceiling" },
+    { "label": "Natural Light", "value": "natural_light" },
+    { "label": "Notable Chandelier", "value": "notable_chandelier" },
+    { "label": "Pool", "value": "pool" },
+    { "label": "Skylight", "value": "skylight" },
+    { "label": "Stone Wall", "value": "stone_wall" },
+    { "label": "Textured Ceiling", "value": "textured_ceiling" },
+    { "label": "Tile Wall", "value": "tile_wall" },
+    { "label": "Track Lighting", "value": "track_lighting" },
+    { "label": "Tray Ceiling", "value": "tray_ceiling" },
+    { "label": "Vaulted Ceiling", "value": "vaulted_ceiling" },
+    { "label": "Wood Ceiling", "value": "wood_ceiling" },
+    { "label": "Wood Wall", "value": "wood_wall" }
+  ],
+  "kitchen": [
+    { "label": "Backsplash", "value": "backsplash" },
+    { "label": "Brown Cabinets", "value": "brown_cabinets" },
+    { "label": "Dark Brown Cabinets", "value": "dark_brown_cabinets" },
+    { "label": "Light Brown Cabinets", "value": "light_brown_cabinets" },
+    { "label": "White Cabinets", "value": "white_cabinets" },
+    { "label": "Stone Countertops", "value": "stone_countertops" },
+    { "label": "Countertops", "value": "countertops" },
+    { "label": "Kitchen Bar", "value": "kitchen_bar" },
+    { "label": "Kitchen Island", "value": "kitchen_island" },
+    { "label": "Pendant Lighting", "value": "pendant_lighting" }
+  ],
+  "appliances": [
+    { "label": "Baseboard Radiator", "value": "baseboard_radiator" },
+    { "label": "Central AC", "value": "central_ac" },
+    { "label": "Dishwasher", "value": "dishwasher" },
+    { "label": "Double Oven", "value": "double_oven" },
+    { "label": "Microwave", "value": "microwave" },
+    { "label": "Oven", "value": "oven" },
+    { "label": "Radiator", "value": "radiator" },
+    { "label": "Range Hood", "value": "range_hood" },
+    { "label": "Range Oven", "value": "range_oven" },
+    { "label": "Separate Washer & Dryer", "value": "separate_washer__dryer" },
+    { "label": "Stacked Washer & Dryer", "value": "stacked_washer__dryer" },
+    { "label": "Stovetop", "value": "stovetop" },
+    { "label": "Refrigerator", "value": "refrigerator" },
+    { "label": "TV", "value": "tv" },
+    { "label": "Wall-Mounted AC", "value": "wall_mounted_ac" },
+    { "label": "Washer & Dryer", "value": "washer__dryer" },
+    { "label": "Water Heater", "value": "water_heater" }
+  ]
 }
-  
