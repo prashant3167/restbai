@@ -42,23 +42,23 @@ def upload():
     create_url(pid)
     detected_room = []
     detected_feautres = []
+    prepare_response = dict()
     for i in image_url:
         t0,t1 =get_room_details(i)
         detected_room.append(t0)
         detected_feautres.extend(t1)
+        prepare_response[i] = detected_room
 
     detected_feautres = set(detected_feautres) + set(detected_room)
     mentioned_features = set(get_mentioned_feature(data))
     desc = get_advert_desc(mentioned_features)
     title = get_advert_title(mentioned_features)
 
-    prepare_response = dict()
     prepare_response['property_id'] = pid
     prepare_response['title'] = title
     prepare_response['description'] = desc
     prepare_response['mentioned_features'] = mentioned_features
     prepare_response['detected_feautres'] = detected_feautres
-    prepare_response['image_url'] = image_url
 
     print(prepare_response)
 
@@ -67,7 +67,12 @@ def upload():
 
     return {"hbc": request.files.getlist("upload")}
 
-@app.route("/advert/")
+@app.route('/advert/<int:pid>', methods=['GET'])
+def get_advert(pid):
+    with open('app/static/' + pid + '/' + pid + '.json', "w") as f:
+        response = json.load(f)
+    return response
+
 @app.route("/tets/", methods=["GET"])
 def test():
     # if 'image' not in request.files:
