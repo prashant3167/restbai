@@ -3,7 +3,7 @@ version: '3.4'
 services:
   verifier:
     container_name: verifier
-    image: docker.io/library/resbai_verifier:main-f55bf51-dirty
+    image: docker.io/library/resbai_verifier:main-d53a41e-dirty
     # build:
     #   context: .
     #   dockerfile: ./Dockerfile
