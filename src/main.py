@@ -14,8 +14,7 @@ app = Flask(__name__)
 def create_url(pid):
     subprocess.run(["git", "-C","app", "add", "."]) 
     subprocess.run(["git", "-C","app", "commit", "-a", "-m", f"""\"{pid} images\""""])
-    subprocess.run(["git", "-C","app", "push"]) 
-
+    subprocess.run(["git", "-C","app", "push"])
 
 @app.route("/upload", methods=["POST"])
 def upload():
