@@ -2,7 +2,8 @@ from flask import Flask, request
 from paste.translogger import TransLogger
 from waitress import serve
 import subprocess
-from ml import get_room_details
+import json
+from ml import get_room_details, get_advert_title, get_advert_desc, get_mentioned_feature
 # from flask_cors import CORS
 
 import os
@@ -31,7 +32,7 @@ def upload():
     os.makedirs('app/static/'+pid,exist_ok=True)
     # # image.save('/app/static/test.jpeg')
     data = request.form.to_dict()
-    print("request.form.to_dict(")
+    print("request.form.to_dict")
     print(data)
     image_url = []
     for file in request.files.getlist("files"):
@@ -40,9 +41,30 @@ def upload():
         file.save('app/static/'+pid+'/'+filename)
         image_url.append(f'https://raw.githubusercontent.com/prashant3167/fastrestbai/main/static/{pid}/{filename}')
     create_url(pid)
+    detected_room = []
+    detected_feautres = []
     for i in image_url:
-        r_type,r_feature =get_room_details(i)
-        print(r_type,r_feature)
+        t0,t1 =get_room_details(i)
+        detected_room.append(t0)
+        detected_feautres.extend(t1)
+
+    detected_feautres = set(detected_feautres) + set(detected_room)
+    mentioned_features = set(get_mentioned_feature(data))
+    desc = get_advert_desc(mentioned_features)
+    title = get_advert_title(mentioned_features)
+
+    prepare_response = dict()
+    prepare_response['property_id'] = pid
+    prepare_response['title'] = title
+    prepare_response['description'] = desc
+    prepare_response['mentioned_features'] = mentioned_features
+    prepare_response['detected_feautres'] = detected_feautres
+    prepare_response['image_url'] = image_url
+
+    print(prepare_response)
+
+    with open('app/static/'+pid+'/' + pid + '.json', "w") as fp:
+        json.dump(prepare_response, fp, indent=4)
 
     return {"hbc": request.files.getlist("upload")}
 
