@@ -7,10 +7,11 @@ services:
     container_name: frontend
     ports:
       - "80:80"
+      - "3000:3000"
 
   verifier:
     container_name: verifier
-    image: docker.io/library/resbai_verifier:main-23c29ed-dirty
+    image: docker.io/library/resbai_verifier:main-3548515-dirty
     # build:
     #   context: .
     #   dockerfile: ./Dockerfile

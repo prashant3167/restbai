@@ -43,7 +43,6 @@ def upload():
 
     return {"hbc": request.files.getlist("upload")}
 
-
 @app.route("/tets/", methods=["GET"])
 def test():
     # if 'image' not in request.files:
