@@ -10,10 +10,19 @@ def upload():
     if "image" not in request.files:
         return "No image uploaded.", 400
 
-    image = request.files["image"]
+    # image = request.files["image"]
+    for file in request.files.getlist("upload"):
+        print(file)
+        filename = file.filename
+        destination = "/".join(['/app/static', filename])
+        print("Accept incoming file:", filename)
+        print(destination)
+        file.save(destination)
+
+    # image.save('/app/'+image.filename)
     # You can save the image to a directory or perform any other processing here.
     # For simplicity, let's just return the name of the uploaded image.
-    return "Image uploaded: " + image.filename
+    # return "Image uploaded: " + image.filename
 
 
 @app.route("/tets/", methods=["GET"])

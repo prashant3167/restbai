@@ -3,7 +3,7 @@ version: '3.4'
 services:
   verifier:
     container_name: verifier
-    image: docker.io/library/resbai_verifier:main-637434c-dirty
+    image: docker.io/library/resbai_verifier:main-f55bf51-dirty
     # build:
     #   context: .
     #   dockerfile: ./Dockerfile
@@ -13,4 +13,4 @@ services:
       - "8000:8000"
     # network_mode: host
     # extra_hosts:
-    #   - "seed:10.4.41.51"
+    #   - "seed:10.4.41.51"p
