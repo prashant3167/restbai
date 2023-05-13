@@ -1,15 +1,16 @@
 version: '3.4'
 
 services:
-  bique-gate:
+  verifier:
     container_name: verifier
-    image: resbai_verifier:main-83150ec-dirty
+    image: docker.io/library/resbai_verifier:main-637434c-dirty
     # build:
     #   context: .
     #   dockerfile: ./Dockerfile
-    environment:
-      - PYTHONPATH=/app
+    # environment:
+    #   - PYTHONPATH=/app
     ports:
-      - 8000:8000
+      - "8000:8000"
+    # network_mode: host
     # extra_hosts:
     #   - "seed:10.4.41.51"
