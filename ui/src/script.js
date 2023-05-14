@@ -50,19 +50,19 @@ class CitiesSlider extends React.Component {
           {this.props.slides.map((slide, index) => (
             <div
               className={classNames('slider__slide', { 's--active': activeSlide === index, 's--prev': prevSlide === index  })}
-              key={slide.city}
+              key={slide.type}
               >
               <div className="slider__slide-content">
-                <h3 className="slider__slide-subheading">{slide.country || slide.city}</h3>
+                {/* <h3 className="slider__slide-subheading">{slide.type}</h3> */}
                 <h2 className="slider__slide-heading">
-                  {slide.city.split('').map(l => <span>{l}</span>)}
+                  {slide.type.split('').map(l => <span>{l}</span>)}
                 </h2>
                 <p className="slider__slide-readmore">read more</p>
               </div>
               <div className="slider__slide-parts">
                 {[...Array(this.IMAGE_PARTS).fill()].map((x, i) => (
                   <div className="slider__slide-part" key={i}>
-                    <div className="slider__slide-part-inner" style={{ backgroundImage: `url(${slide.img})` }} />
+                    <div className="slider__slide-part-inner" style={{ backgroundImage: `url(${slide.url})` }} />
                   </div>
                 ))}
               </div>

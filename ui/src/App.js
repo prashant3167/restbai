@@ -5,6 +5,7 @@ import optionsa from "./data.json";
 import TextField from "@mui/material/TextField";
 
 
+
 function App() {
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [propertyid, setpropertyid] = useState("");
@@ -16,6 +17,7 @@ function App() {
     countwash: 1,
     // Add more child components as needed
   });
+  const [isSubmitting,setSubmission] = useState(false);
   // console.log(optionsa);
 
 
@@ -75,8 +77,8 @@ function App() {
     );
     formData.append("totalBedroom", childData.countbed);
     formData.append("totalWashroom", childData.countwash);
-
-    fetch("http://verifier:8000/upload", {
+    setSubmission(true);
+    fetch("http://localhost:8000/upload", {
       method: "POST",
       body: formData,
       headers: {
@@ -88,14 +90,20 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
+        window.location = "http://localhost:3000/info/"+propertyid;
       })
       .catch((error) => {
         console.error(error);
+        setSubmission(false);
       });
+      
+
   };
 
   return (
-    <form className="file-upload-form" onSubmit={handleFormSubmit}>
+    <div>
+      <h2 style={{textAlign:"center",marginTop:"10vh"}}>House Validator</h2>
+    <form className="file-upload-form" onSubmit={handleFormSubmit} style={{marginTop:"10vh"}}>
       <div className="form-group">
         <label htmlFor="name">PropertyID:</label>
         <input
@@ -120,7 +128,7 @@ function App() {
         onChange={handleWashChange}
       />
       <AnimatedMulti
-        childId="bedroom"
+        childId="interior"
         options={optionsa.interior}
         onChange={handleDataChange}
         placeholder={<div>Select Interior amenities</div>}
@@ -142,8 +150,16 @@ function App() {
         <label htmlFor="files">Select Property Images:</label>
         <input type="file" id="files" multiple onChange={handleFileChange} />
       </div>
-      <button type="submit">Verify</button>
+      <button type="submit" >
+      {isSubmitting && (
+                  <span className="spinner-grow spinner-grow-sm">Evaluating</span>
+                )}
+        {!isSubmitting && (
+                  <span>Verify</span>
+                )}
+        </button>
     </form>
+    </div>
   );
 }
 

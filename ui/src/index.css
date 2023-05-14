@@ -9,17 +9,38 @@ body {
 }
 
 html {
-  background-image: url('house.jpg');
+  background-image: url('house2.jpg');
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.spage{
+  opacity:50%
+}
+.entry-title {
+  text-align: center;
+}
+
+.entry-title2
+{
+  background-color: lightgray;
+}
+.css-1b6mb3w-MuiPaper-root-MuiAlert-root{
+  margin-left: 25px;
+margin-right: 18px;
+font-size: larger
+}
+.css-1pxa9xg-MuiAlert-message {
+  font-size: larger
 }
 /* *, *:before, *:after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+.{}
 
 body {
   font-family: "Roboto", Helvetica, Arial, sans-serif;

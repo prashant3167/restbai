@@ -6,6 +6,7 @@ import Listing  from './Listing';
 import Slideshow from './Fade';
 import CitiesSlider from './script';
 import reportWebVitals from './reportWebVitals';
+import DataModule from './SecondPage';
 // import {
 //   BrowserRouter as Router,
 //   Switch,
@@ -14,6 +15,7 @@ import reportWebVitals from './reportWebVitals';
 // } from "react-router-dom";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 // import { Routes ,Route } from 'react-router-dom';
+
 
 
 const slides = [
@@ -38,7 +40,7 @@ ReactDOM.render(
     {/* <Router> */}
     <Router>
     <Routes>
-    <Route path='/info/' element={<CitiesSlider slides={slides} />} />
+    <Route path='/info/:id' element={<DataModule/>} />
     <Route path='/' element={<App/>} />
     </Routes>
     </Router>

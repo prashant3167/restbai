@@ -11,14 +11,9 @@ services:
 
   verifier:
     container_name: verifier
-    image: docker.io/library/resbai_verifier:main-3548515-dirty
-    # build:
-    #   context: .
-    #   dockerfile: ./Dockerfile
-    # environment:
-    #   - PYTHONPATH=/app
+    image: docker.io/library/resbai_verifier:main-28f2207-dirty
+    volumes:
+    - ./temp:/app/app/static/
+    # - ./temp/.git:/static_files/.git
     ports:
       - "8000:8000"
-    # network_mode: host
-    # extra_hosts:
-    #   - "seed:10.4.41.51"p

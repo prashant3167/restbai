@@ -13,4 +13,5 @@ Flask-SQLAlchemy==2.5.1
 requests-mock==1.9.3
 pytest==6.2.5
 Paste==3.5.0
+openai
 # pymongo
